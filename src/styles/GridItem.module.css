@@ -14,7 +14,7 @@
   overflow: hidden;
 
   background: rgb(237, 212, 248);
-  /* animation: blurIn ease-in 0.8s forwards; */
+  animation: blurIn ease-in 0.8s forwards;
 }
 
 @media (min-width: 408px) {
@@ -23,14 +23,14 @@
   }
 }
 
-.imageContainer canvas {
+.imageContainer img {
   width: 100%;
   height: 100%;
 
   object-fit: cover;
   pointer-events: none;
 
-  /* animation: blurIn ease-in 0.8s forwards; */
+  animation: blurIn ease-in 0.8s forwards;
 }
 
 .container:hover .imageContainer {

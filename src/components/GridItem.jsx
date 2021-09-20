@@ -1,23 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import loadImage from 'blueimp-load-image';
 
 import styles from '../styles/GridItem.module.css';
 import GridOptions from './GridOptions';
 
 const GridItem = ({ src }) => {
-  const ImageContainerRef = useRef(null);
   const [showOptions, setShowOptions] = useState(false);
-
-  useEffect(() => {
-    loadImage(src, {
-      canvas: true,
-      maxWidth: 120,
-      maxHeight: 120,
-      cover: true,
-    }).then((data) => {
-      ImageContainerRef.current.append(data.image);
-    });
-  }, []);
 
   return (
     <div
@@ -31,11 +18,12 @@ const GridItem = ({ src }) => {
     >
       <div
         className={styles.imageContainer}
-        ref={ImageContainerRef}
         onContextMenu={(e) => {
           e.preventDefault();
         }}
-      ></div>
+      >
+        <img src={URL.createObjectURL(src)} />
+      </div>
       {showOptions && <GridOptions />}
     </div>
   );
