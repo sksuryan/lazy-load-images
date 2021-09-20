@@ -1,8 +1,0 @@
-{
-  "imports": {
-    "blueimp-load-image": "./blueimp-load-image.js",
-    "react": "./react.js",
-    "react-dom": "./react-dom.js",
-    "react-lazyload": "./react-lazyload.js"
-  }
-}
