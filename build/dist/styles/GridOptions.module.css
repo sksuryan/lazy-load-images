@@ -1,0 +1,45 @@
+._container_1t9vy_1 {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  bottom: 0;
+
+  width: calc(120px - 8px);
+  padding: 0.625rem 1rem;
+  margin: 4px;
+
+  background: linear-gradient(rgb(248, 247, 248), rgb(235, 228, 243));
+
+  border-radius: 1rem;
+
+  transition: all ease-in 0.4sec;
+  /* animation: scaleIn ease-in 0.4s forwards; */
+
+  z-index: 10;
+}
+
+._container_1t9vy_1 button {
+  background: none;
+  outline: none;
+  border: none;
+
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 0.75rem;
+
+  margin: 0.5rem 0;
+
+  cursor: pointer;
+}
+
+@keyframes _scaleIn_1t9vy_1 {
+  0% {
+    width: 0%;
+    transform: scale(0);
+  }
+  100% {
+    width: calc(120px - 8px);
+    transform: scale(1);
+  }
+}

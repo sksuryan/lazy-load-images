@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 80px;
+
+  transition: all 0.4s ease-in;
+
+  cursor: pointer;
+
+  border-radius: 1rem;
+  overflow: hidden;
+
+  background: rgb(237, 212, 248);
+  /* animation: blurIn ease-in 0.8s forwards; */
+}
+
+@media (min-width: 408px) {
+  .imageContainer {
+    height: 120px;
+  }
+}
+
+.imageContainer canvas {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  pointer-events: none;
+
+  /* animation: blurIn ease-in 0.8s forwards; */
+}
+
+.container:hover .imageContainer {
+  filter: blur(2px) grayscale(1) !important;
+}
+
+@keyframes blurIn {
+  0% {
+    filter: blur(4px);
+  }
+  100% {
+    filter: unset;
+  }
+}

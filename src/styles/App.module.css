@@ -1,0 +1,8 @@
+.main {
+  display: grid;
+}
+
+.main input {
+  margin: 0 auto;
+  margin-top: 10px;
+}
