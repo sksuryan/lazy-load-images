@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from '../styles/GridItem.module.css';
 import GridOptions from './GridOptions';
 
-const GridItem = ({ src }) => {
+const GridItem = ({ src, imageData }) => {
   const [showOptions, setShowOptions] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ const GridItem = ({ src }) => {
           e.preventDefault();
         }}
       >
-        <img src={URL.createObjectURL(src)} />
+        <img src={imageData ? imageData : URL.createObjectURL(src)} />
       </div>
       {showOptions && <GridOptions />}
     </div>
